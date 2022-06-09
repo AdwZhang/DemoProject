@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/Spine Examples/Getting Started/5 Basic Platformer.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
