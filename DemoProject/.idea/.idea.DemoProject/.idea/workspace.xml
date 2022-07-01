@@ -1,31 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44343a0a-fdab-4afd-9946-ba6e4c46e176" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SpineSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/EditorSnapSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ShaderCache.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/385d51-mainStage.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/5b3397-mainStage.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe10.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe11.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe12.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe7.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe8.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe9.log" afterDir="false" />
+    <list default="true" id="156850c4-d322-46c0-8b00-1b7841da071f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/item.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/item.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scenes/New Scene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scenes/New Scene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/InfiniteScroll.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/InfiniteScroll.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/InitScroll.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/Scripts/InitScroll.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/36/3655f0c59fd100c2f027b19d05a66fc5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/38/38143e90c10ffb647223b5a189fdee3b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/68/68c2d1e7330d5af62c15201d3a240632" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/73/7371b771ae0f52e142f2666c6b296613" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/EditorInstance.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/2/216c554a34fd5912b643f6a5befa1e99.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/8/89749f94953c4062e781131f6fdba464.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/385d51-0466f482b6bf097498.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/5b3397-0466f482b6bf097498.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-914d55ce6618b0445935587534aecc12" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-91e0087ef1157de4c8528e9494c67748" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CopyComplete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-csharp.csproj.CopyComplete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-csharp.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-csharp.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-csharp.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-csharp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-editor.csproj.CopyComplete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-editor.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-editor.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-editor.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-editor.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-examples-editor.csproj.CopyComplete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-examples-editor.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-examples-editor.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-examples-editor.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-examples-editor.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-examples.csproj.CopyComplete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-examples.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-examples.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-examples.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity-examples.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity.csproj.CopyComplete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/spine-unity.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Scenes/InfiniteScroll.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Scenes/InfiniteScroll.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0b/0b4b32de368b813c0055a63e9ccd6553" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/22/2213d4a10195a243ccfbd2b7879817f1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/30/307ab7239280b8537ad75a54a677f1bb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/32/32811c9f93079c63d6af2739f7c72534" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/51/515ef95bbd33d33db2bdb17e48ed649a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5b/5b5d17a59c0cda1a6fea26fa227a8226" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6c/6c68405d6bd01a4269235c9742f09315" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6d/6d277b0bfef110a11fd1a11b016fc3d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/b7/b74cf7b59e7a2f176e7577b53de7848e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c4/c4fb95a61d934417937fa730494b8ea2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/385d51-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/385d51-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/5b3397-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/5b3397-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,26 +91,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AF1F7C-51E9-4179-A29D-BA37A373CDEF/e8/da083be3/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/GridLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/MyProject/DemoProject/DemoProject/Assets/UI/Scenes/InfiniteScroll.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="ProjectId" id="2ALcxKhenlbT2BMp4SiThS2nPrj" />
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/UI/Scripts/InitScroll.cs" />
+      <option value="$PROJECT_DIR$/Assets/UI/Scripts/InfiniteScroll.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="2BKwDGYrUSra8YEnlHSgHI9B06B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -68,10 +125,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="16884">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="16884" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -81,14 +138,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="44343a0a-fdab-4afd-9946-ba6e4c46e176" name="Default Changelist" comment="" />
-      <created>1654792554591</created>
+      <changelist id="156850c4-d322-46c0-8b00-1b7841da071f" name="Default Changelist" comment="" />
+      <created>1656667965421</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1654792554591</updated>
-      <workItem from="1654792559806" duration="94000" />
-      <workItem from="1654792692443" duration="129000" />
-      <workItem from="1654792837596" duration="2575000" />
+      <updated>1656667965421</updated>
+      <workItem from="1656667973267" duration="1685000" />
+      <workItem from="1656670104651" duration="4888000" />
     </task>
     <servers />
   </component>
@@ -111,5 +167,39 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="无限滑动列表练习" />
+    <option name="LAST_COMMIT_MESSAGE" value="无限滑动列表练习" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Spine Examples/Scripts/Getting Started Scripts/BasicPlatformerController.cs</url>
+          <line>84</line>
+          <properties documentPath="E:\MyProject\DemoProject\DemoProject\Assets\Spine Examples\Scripts\Getting Started Scripts\BasicPlatformerController.cs" initialLine="84" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="2952" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2978" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/UI/Scripts/InfiniteScroll.cs</url>
+          <line>246</line>
+          <properties documentPath="E:\MyProject\DemoProject\DemoProject\Assets\UI\Scripts\InfiniteScroll.cs" initialLine="246" containingFunctionPresentation="method 'SetShow'">
+            <startOffsets>
+              <option value="7023" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7084" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
