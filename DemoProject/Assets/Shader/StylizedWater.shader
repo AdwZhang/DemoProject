@@ -4,6 +4,7 @@
     {
         _Color("Color",Color) = (1,1,1,1)
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
+        _ShoreLineThreshold("ShoreLine threshold",float) = 1
     }
     SubShader
     {
@@ -24,10 +25,14 @@
         struct Input
         {
             float3 viewDir;
+            float4 screenPos;
         };
 
         half _Glossiness;
         fixed4 _Color;
+
+        sampler2D _CameraDepthTexture;
+        float _ShoreLineThreshold;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -38,6 +43,8 @@
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
+            float depth = tex2Dproj(_CameraDepthTexture,UNITY_PROJ_COORD(IN.screenPos));
+            depth = LinearEyeDepth(depth);
             // Albedo comes from a texture tinted by color
             fixed4 c =  _Color;
             o.Albedo = c.rgb;
