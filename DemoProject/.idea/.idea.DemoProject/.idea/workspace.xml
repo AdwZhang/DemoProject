@@ -2,26 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="156850c4-d322-46c0-8b00-1b7841da071f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DemoProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/New Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Water.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Water.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shader/StylizedWater.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/StylizedWater.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ShaderTest/Scan/New Amplify Shader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ShaderTest/Scan/New Amplify Shader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ShaderTest/Scan/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ShaderTest/Scan/Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/1e/1ecbe58e4d25ffb38b91bbd2c5e268f5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2a/2a725d4d5a14565b6588befff6d553b2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/37/378d576e78ea7dd4d81799c092b2ac1c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/76/76e16f303fe0c7f08fad3e87913ba25a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/90/9086d7681ebcfeba2357c40cc8ec0927" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/93/930aa2a4035a7e0e533144b474a8b8f2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/af/afef402b46ea80dc6c596bd586b627a4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c9/c94261ddb0b6aa864782be1cd776a3a5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d8/d89e426f1bd68a67764f54446f179e93" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/de/de99dd1b9f63fd608d937a04e59dca83" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f2/f2f0e6a22abff8b921066d12925c28d0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ad/ad0d1208855f42df49761e0c809cf061" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptMapper" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptMapper" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/5b3397-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/5b3397-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
@@ -107,7 +99,7 @@
       <workItem from="1656993507014" duration="4796000" />
       <workItem from="1657017823901" duration="13662000" />
       <workItem from="1658113762049" duration="10873000" />
-      <workItem from="1658199471157" duration="4726000" />
+      <workItem from="1658199471157" duration="8069000" />
     </task>
     <servers />
   </component>
