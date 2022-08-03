@@ -18,15 +18,16 @@
         Tags { "Queue"="Tranparent"}
         LOD 100
 
-        Pass
+        Pass    //  用两个pass通道来处理，防止出现渲染错误，第一个pass通道  每个pass通道都会渲染一次
+
 		{
-			ColorMask 0
-			ZWrite On
+			ColorMask 0     //  掩码遮罩  代表这个pass通道不写入任何颜色值
+			ZWrite On       //  写入深度  为了确认渲染顺序
 		}
         
         Pass
         {
-            ZWrite Off
+            ZWrite Off      //  关闭ZWrite（深度写入）
             Blend SrcAlpha one
             CGPROGRAM
             #pragma vertex vert
@@ -67,6 +68,7 @@
             v2f vert (appdata v)
             {
                 v2f o;
+                //v.vertex.xyz += v.normal * 0.01;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.texcoord;
                 
