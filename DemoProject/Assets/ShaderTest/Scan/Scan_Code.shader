@@ -15,7 +15,7 @@
     }
     SubShader
     {
-        Tags { "Queue"="Tranparent"}
+        Tags { "Queue"="Transparent"}
         LOD 100
 
         Pass    //  用两个pass通道来处理，防止出现渲染错误，第一个pass通道  每个pass通道都会渲染一次
