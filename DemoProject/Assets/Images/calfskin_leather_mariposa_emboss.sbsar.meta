@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d6a23ccfe1e62c5498bd93c582b4731c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: dda12f74ff9116a42b23482252b2c482, type: 3}
+  _instancesCopy:
+  - {fileID: 11400000, guid: 4b2e263561d5bbf4cb8ec34e5a2e246d, type: 2}
+  _fileAsset: {instanceID: 0}
+  _assetPath: Assets/Images/calfskin_leather_mariposa_emboss.sbsar
