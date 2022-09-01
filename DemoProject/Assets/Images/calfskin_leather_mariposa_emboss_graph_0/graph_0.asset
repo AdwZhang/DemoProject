@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AssetPath: Assets/Images/calfskin_leather_mariposa_emboss.sbsar
   OutputPath: Assets/Images/calfskin_leather_mariposa_emboss_graph_0
-  RawData: {fileID: 0}
+  RawData: {fileID: -244192453324840774, guid: d6a23ccfe1e62c5498bd93c582b4731c, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
       Index: 1
       Type: 8
       Channel: baseColor
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 411c6415f4c602544a75e522bacf320c, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsStandardOutput: 1
@@ -97,7 +97,7 @@ MonoBehaviour:
       Index: 2
       Type: 8
       Channel: normal
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: f2d427c7c337b2646bca0a863fb2d53f, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsStandardOutput: 1
@@ -165,7 +165,7 @@ MonoBehaviour:
       Index: 6
       Type: 8
       Channel: metallic
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 8314fd7f1fbcc414ba9076d4633fc7ce, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsStandardOutput: 1
@@ -182,7 +182,7 @@ MonoBehaviour:
       Index: 7
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 80a99a0bdf3e079429c8e4b7351bb98d, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsStandardOutput: 1
@@ -199,7 +199,7 @@ MonoBehaviour:
       Index: 8
       Type: 8
       Channel: ambientOcclusion
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: c41a5a834647ba548961b31f50450c0d, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsStandardOutput: 1
@@ -211,15 +211,18 @@ MonoBehaviour:
   HasThumbnail: 1
   CurrentStatePreset: " <sbspreset pkgurl=\"pkg://calfskin_leather_mariposa_emboss\"
     label=\"\" >\n  <presetinput identifier=\"$outputsize\" uid=\"2515000573\" type=\"8\"
-    value=\"10,10\" />\n </sbspreset>\n"
+    value=\"10,10\" />\n  <presetinput identifier=\"calfskin_color\" uid=\"4243372469\"
+    type=\"2\" value=\"0.254717,0.22499,0.205456\" />\n  <presetinput identifier=\"calfskin_roughness_variation\"
+    uid=\"4243372467\" type=\"0\" value=\"0.41\" />\n  <presetinput identifier=\"normal_intensity\"
+    uid=\"2428148263\" type=\"0\" value=\"0.295\" />\n </sbspreset>\n"
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
-  OutputMaterial: {fileID: 0}
+  OutputMaterial: {fileID: 2100000, guid: a5ecbb8206624c54983fb043952f46b3, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://calfskin_leather_mariposa_emboss\" label=\"\"
     >\n  <presetinput identifier=\"$outputsize\" uid=\"2515000573\" type=\"8\" value=\"10,10\"
     />\n </sbspreset>\n"
-  MaterialShader: 
+  MaterialShader: Standard
   RenderTextures: 0
   OutputRemaped: 0
   references:
@@ -280,7 +283,7 @@ MonoBehaviour:
           GuiDescription: 
           Type: 2
           WidgetType: 3
-        Data: {x: 0.839779, y: 0.555944, z: 0.368324}
+        Data: {x: 0.254717, y: 0.22499034, z: 0.20545569}
         NumericalDescription:
           DefaultValue: {x: 0.839779, y: 0.555944, z: 0.368324}
           MinValue: {x: 0, y: 0, z: 0}
@@ -343,7 +346,7 @@ MonoBehaviour:
           GuiDescription: 
           Type: 0
           WidgetType: 1
-        Data: 0.16
+        Data: 0.41
         NumericalDescription:
           DefaultValue: 0.16
           MinValue: 0
@@ -837,7 +840,7 @@ MonoBehaviour:
           GuiDescription: 
           Type: 0
           WidgetType: 1
-        Data: 0.5
+        Data: 0.295
         NumericalDescription:
           DefaultValue: 0.5
           MinValue: 0
