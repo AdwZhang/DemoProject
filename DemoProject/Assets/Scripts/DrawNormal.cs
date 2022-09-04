@@ -3,13 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DrawNormal : MonoBehaviour {
-    [Range(0f, 10f)]
-    public float tbnLen = 0.1f;
     [Range(0, 1000)]
     public int maxShowNum = 100;
     public bool showNormal = true;
     public bool showTangent = true;
     public bool showBiTangent = true;
+
+    [Range(0f, 10f)]
+    public float normalLength = 0.05f;
+    public Color normalColor = Color.red;
+    
+    [Range(0f, 10f)]
+    public float tangentLength = 0.05f;
+    public Color tangentColor = Color.green;
+
+    [Range(0f, 10f)]
+    public float  biTangentLength = 0.05f;
+    public Color biTangentColor = Color.blue;
+
+    public float radius;
+    public Color sphereColor = Color.magenta;
+    
 
     MeshFilter meshFilter;
     Mesh sharedMesh;
@@ -17,7 +31,7 @@ public class DrawNormal : MonoBehaviour {
     Matrix4x4 localToWorld;
     Matrix4x4 localToWorldInverseTranspose;
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         meshFilter = GetComponent<MeshFilter>();
         sharedMesh = meshFilter.sharedMesh;
@@ -54,10 +68,11 @@ public class DrawNormal : MonoBehaviour {
          *      则有 n'*G'*M*t = n'*I*t = n'*t = 0 成立
          *      可得 G'*M = I => G = (inverse(M))'
          */
-        if (showNormal) DrawVectors(vertices, normals, ref localToWorld, ref localToWorldInverseTranspose, Color.red, tbnLen);
-        if (showTangent) DrawVectors(vertices, tangentsData, ref localToWorld, ref localToWorld, Color.green, tbnLen);
-        if (showBiTangent) DrawVectors(vertices, biTangents, ref localToWorld, ref localToWorld, Color.blue, tbnLen);
-        Gizmos.DrawWireSphere(vertices,0.05);
+        if (showNormal) DrawVectors(vertices, normals, ref localToWorld, ref localToWorldInverseTranspose, normalColor, normalLength);
+        if (showTangent) DrawVectors(vertices, tangentsData, ref localToWorld, ref localToWorld, tangentColor, tangentLength);
+        if (showBiTangent) DrawVectors(vertices, biTangents, ref localToWorld, ref localToWorld, biTangentColor, biTangentLength);
+        // Gizmos.DrawWireSphere(vertices,0.05);
+        DrawPointSphere(vertices,ref localToWorld);
     }
 
     /*显示向量
@@ -83,6 +98,16 @@ public class DrawNormal : MonoBehaviour {
             Vector3 vectorData = vectorMatrix.MultiplyVector(vectors[i]);
             vectorData.Normalize();
             Gizmos.DrawLine(vertexData, vertexData + vectorData * vectorLen);
+        }
+    }
+
+    void DrawPointSphere(Vector3[] vertexs, ref Matrix4x4 vertexMatrix)
+    {
+        Gizmos.color = sphereColor;
+        foreach (var vertex in vertexs)
+        {
+            Vector3 vertexData = vertexMatrix.MultiplyPoint(vertex);
+            Gizmos.DrawWireSphere(vertexData,radius);
         }
     }
 }
