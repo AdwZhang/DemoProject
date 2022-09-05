@@ -42,9 +42,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BumpScale: 1.5
+    - _BumpScale: 1.68
     - _Gloss: 256
-    - _HeightScale: 0
+    - _HeightScale: -0.049
     m_Colors:
     - _Diffuse: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

@@ -6,11 +6,11 @@ Shader "Unlit/Phong"
     {
         _MainTex ("Texture", 2D) = "white" {}
         _Bump ("Bump Map",2D) = "white" {}
-        _BumpScale ("Bump Scale",Float) = 1
+        _BumpScale ("Bump Scale",Range(0,5)) = 1
         _AOMap ("AO Map",2D) = "white" {}
         _SpecMask ("Spec Mask",2D) = "white" {}
         _HeightMap ("Height Map",2D) = "white" {}
-        _HeightScale ("Height Scale",Float) = 1
+        _HeightScale ("Height Scale",Range(-0.1,0.1)) = 0
         _SpecularColor ("SpecularColor", Color) = (1,1,1,1)
         _Gloss ("Gloss",Range(8.0,256)) = 20
     }
@@ -22,6 +22,8 @@ Shader "Unlit/Phong"
         {
             Tags {"LightMode" = "ForwardBase"}
             CGPROGRAM
+// Upgrade NOTE: excluded shader from OpenGL ES 2.0 because it uses non-square matrices
+#pragma exclude_renderers gles
             #pragma vertex vert
             #pragma fragment frag
             #pragma multi_compile_fwdbase
@@ -87,24 +89,26 @@ Shader "Unlit/Phong"
                 float3 view_dir = normalize(_WorldSpaceCameraPos.xyz - pos_world);
                 float3 ligth_dir = normalize(_WorldSpaceLightPos0.xyz);
 
-                float3 view_dir_tangent_space = normalize(fixed3(dot(i.TtoW0.xyz,view_dir),dot(i.TtoW1.xyz,view_dir),dot(i.TtoW2.xyz,view_dir)));
+                float3x3 TBN = float3x3(normalize(i.TtoW0.xyz),normalize(i.TtoW1.xyz),normalize(i.TtoW2.xyz)); 
+                
+                float3 view_dir_tangent_space = normalize(mul(view_dir,TBN));
                 float2 texcoords = ParallaxMapping(i.uv,view_dir_tangent_space);
-                if(texcoords.x > 1.0 || texcoords.y > 1.0 || texcoords.x < 0.0 || texcoords.y < 0.0) discard;
                 fixed3 bump = UnpackNormal(tex2D(_Bump,texcoords));
                 bump.xy *= _BumpScale;
-                bump.z = sqrt(1.0 - saturate(dot(bump.xy,bump.xy)));
-                bump = normalize(fixed3(dot(i.TtoW0.xyz,bump),dot(i.TtoW1.xyz,bump),dot(i.TtoW2.xyz,bump)));
+                //bump.z = sqrt(1.0 - saturate(dot(bump.xy,bump.xy)));
+                //bump = normalize(fixed3(dot(i.TtoW0.xyz,bump),dot(i.TtoW1.xyz,bump),dot(i.TtoW2.xyz,bump)));
+                bump = normalize(mul(TBN,bump));
                            
                 float NdotL = dot(bump,ligth_dir);
                 float4 base_color = tex2D(_MainTex,texcoords);
                 float4 ao_color = tex2D(_AOMap,texcoords); 
                 float4 spec_mask = tex2D(_SpecMask,texcoords);
-                spec_mask = float4(1.0,1.0,1.0,1.0) - spec_mask;
+                //spec_mask = float4(1.0,1.0,1.0,1.0) - spec_mask;
                 
                 float3 diffuse = _LightColor0.xyz * base_color.xyz * (max(0.0,NdotL) * 0.9 + 0.1);
                 float3 reflect_dir = normalize(2 * dot(bump,ligth_dir) * bump - ligth_dir);
                 float3 specular = _LightColor0.xyz * _SpecularColor.xyz * pow(max(0,dot(view_dir,reflect_dir)),_Gloss) * spec_mask;
-                fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT;
+                fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT * base_color.xyz;
                 float3 final_color = (diffuse + specular + ambient) * ao_color;
                 // sample the texture
                 return float4(final_color,1.0);
@@ -112,7 +116,7 @@ Shader "Unlit/Phong"
             ENDCG
         }
         
-        Pass
+/*        Pass
         {
             Tags {"LightMode" = "ForwardAdd"}
             Blend One One
@@ -209,6 +213,6 @@ Shader "Unlit/Phong"
                 return float4(final_color,1.0);
             }
             ENDCG
-        }
+        }*/
     }
 }
