@@ -28,6 +28,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: c507407cf77747e4dbb3592c6f520184, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _HeightMap:
+        m_Texture: {fileID: 2800000, guid: 7d53307bd98b6bb41b07a1d01a2c9769, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 2bbf68072132ba14883da6d240848a2e, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -40,6 +44,7 @@ Material:
     m_Floats:
     - _BumpScale: 1.5
     - _Gloss: 256
+    - _HeightScale: 0
     m_Colors:
     - _Diffuse: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

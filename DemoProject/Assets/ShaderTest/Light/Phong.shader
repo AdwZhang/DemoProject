@@ -9,6 +9,8 @@ Shader "Unlit/Phong"
         _BumpScale ("Bump Scale",Float) = 1
         _AOMap ("AO Map",2D) = "white" {}
         _SpecMask ("Spec Mask",2D) = "white" {}
+        _HeightMap ("Height Map",2D) = "white" {}
+        _HeightScale ("Height Scale",Float) = 1
         _SpecularColor ("SpecularColor", Color) = (1,1,1,1)
         _Gloss ("Gloss",Range(8.0,256)) = 20
     }
@@ -49,10 +51,20 @@ Shader "Unlit/Phong"
             float _BumpScale;
             sampler2D _AOMap;
             sampler2D _SpecMask;
+            sampler2D _HeightMap;
+            float _HeightScale;
             float4 _LightColor0;
             float4 _SpecularColor;
             float _Gloss;
 
+            float2 ParallaxMapping(float2 texcoords, float3 viewDir)
+            {
+                float height = tex2D(_HeightMap,texcoords).r;
+                height = 1.0f - height;
+                float2 p = viewDir.xy/viewDir.z * (height * _HeightScale);
+                return texcoords - p;
+            }
+            
             v2f vert (appdata v)
             {
                 v2f o;
@@ -72,17 +84,21 @@ Shader "Unlit/Phong"
             fixed4 frag (v2f i) : SV_Target
             {
                 float3 pos_world = float3(i.TtoW0.w,i.TtoW1.w,i.TtoW2.w);
-                fixed3 bump = UnpackNormal(tex2D(_Bump,i.uv));
+                float3 view_dir = normalize(_WorldSpaceCameraPos.xyz - pos_world);
+                float3 ligth_dir = normalize(_WorldSpaceLightPos0.xyz);
+
+                float3 view_dir_tangent_space = normalize(fixed3(dot(i.TtoW0.xyz,view_dir),dot(i.TtoW1.xyz,view_dir),dot(i.TtoW2.xyz,view_dir)));
+                float2 texcoords = ParallaxMapping(i.uv,view_dir_tangent_space);
+                if(texcoords.x > 1.0 || texcoords.y > 1.0 || texcoords.x < 0.0 || texcoords.y < 0.0) discard;
+                fixed3 bump = UnpackNormal(tex2D(_Bump,texcoords));
                 bump.xy *= _BumpScale;
                 bump.z = sqrt(1.0 - saturate(dot(bump.xy,bump.xy)));
                 bump = normalize(fixed3(dot(i.TtoW0.xyz,bump),dot(i.TtoW1.xyz,bump),dot(i.TtoW2.xyz,bump)));
                            
-                float3 view_dir = normalize(_WorldSpaceCameraPos.xyz - pos_world);
-                float3 ligth_dir = normalize(_WorldSpaceLightPos0.xyz);
                 float NdotL = dot(bump,ligth_dir);
-                float4 base_color = tex2D(_MainTex,i.uv);
-                float4 ao_color = tex2D(_AOMap,i.uv); 
-                float4 spec_mask = tex2D(_SpecMask,i.uv);
+                float4 base_color = tex2D(_MainTex,texcoords);
+                float4 ao_color = tex2D(_AOMap,texcoords); 
+                float4 spec_mask = tex2D(_SpecMask,texcoords);
                 spec_mask = float4(1.0,1.0,1.0,1.0) - spec_mask;
                 
                 float3 diffuse = _LightColor0.xyz * base_color.xyz * (max(0.0,NdotL) * 0.9 + 0.1);
@@ -130,9 +146,18 @@ Shader "Unlit/Phong"
             float _BumpScale;
             sampler2D _AOMap;
             sampler2D _SpecMask;
+            sampler2D _HeightMap;
+            float _HeightScale;
             float4 _LightColor0;
             float4 _SpecularColor;
             float _Gloss;
+
+            float2 ParallaxMapping(float2 texcoords, float3 viewDir)
+            {
+                float height = tex2D(_HeightMap,texcoords);
+                float2 p = viewDir.xy/viewDir.z * (height * _HeightScale);
+                return texcoords - p;
+            }
 
             v2f vert (appdata v)
             {
