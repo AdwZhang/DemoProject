@@ -22,14 +22,14 @@ Shader "Unlit/Phong"
         {
             Tags {"LightMode" = "ForwardBase"}
             CGPROGRAM
-// Upgrade NOTE: excluded shader from OpenGL ES 2.0 because it uses non-square matrices
-#pragma exclude_renderers gles
+            // Upgrade NOTE: excluded shader from OpenGL ES 2.0 because it uses non-square matrices
+            #pragma exclude_renderers gles
             #pragma vertex vert
             #pragma fragment frag
             #pragma multi_compile_fwdbase
             #include "UnityCG.cginc"
             #include "AutoLight.cginc"
-
+            
             struct appdata
             {
                 float4 vertex : POSITION;
@@ -45,6 +45,7 @@ Shader "Unlit/Phong"
                 float4 TtoW0 : TEXTCOORD1;
                 float4 TtoW1 : TEXTCOORD2;
                 float4 TtoW2 : TEXTCOORD3;
+                SHADOW_COORDS(4)
             };
 
             sampler2D _MainTex;
@@ -61,10 +62,11 @@ Shader "Unlit/Phong"
 
             float2 ParallaxMapping(float2 texcoords, float3 viewDir)
             {
-                float height = tex2D(_HeightMap,texcoords).r;
+                half height = tex2D(_HeightMap,texcoords).r;
                 height = 1.0f - height;
-                float2 p = viewDir.xy/viewDir.z * (height * _HeightScale);
-                return texcoords - p;
+                float2 p = viewDir.xy / viewDir.z * (height * _HeightScale);
+                texcoords = texcoords + p;
+                return texcoords;
             }
             
             v2f vert (appdata v)
@@ -80,11 +82,13 @@ Shader "Unlit/Phong"
                 o.TtoW1 = float4(tangent_world.y,binormal_world.y,normal_world.y,pos_world.y);
                 o.TtoW2 = float4(tangent_world.z,binormal_world.z,normal_world.z,pos_world.z);
                 o.uv = TRANSFORM_TEX(v.texcoord,_MainTex);
+                TRANSFER_SHADOW(o)
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
+                half shadow = SHADOW_ATTENUATION(i);
                 float3 pos_world = float3(i.TtoW0.w,i.TtoW1.w,i.TtoW2.w);
                 float3 view_dir = normalize(_WorldSpaceCameraPos.xyz - pos_world);
                 float3 ligth_dir = normalize(_WorldSpaceLightPos0.xyz);
@@ -93,6 +97,13 @@ Shader "Unlit/Phong"
                 
                 float3 view_dir_tangent_space = normalize(mul(view_dir,TBN));
                 float2 texcoords = ParallaxMapping(i.uv,view_dir_tangent_space);
+                /*float2 texcoords = i.uv;
+                for(int k = 0; k < 10; k++)
+                {
+                    half height = tex2D(_HeightMap,texcoords);
+                    texcoords = texcoords + (1.0 - height) * view_dir_tangent_space.xy * _HeightScale;
+                }*/
+                
                 fixed3 bump = UnpackNormal(tex2D(_Bump,texcoords));
                 bump.xy *= _BumpScale;
                 //bump.z = sqrt(1.0 - saturate(dot(bump.xy,bump.xy)));
@@ -111,7 +122,10 @@ Shader "Unlit/Phong"
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT * base_color.xyz;
                 float3 final_color = (diffuse + specular + ambient) * ao_color;
                 // sample the texture
-                return float4(final_color,1.0);
+                
+                //half shadow = SHADOW_ATTENUATION(i);
+                
+                return float4(shadow.xxx,1.0);
             }
             ENDCG
         }
@@ -214,5 +228,7 @@ Shader "Unlit/Phong"
             }
             ENDCG
         }*/
+
     }
+    Fallback "Diffuse"
 }
