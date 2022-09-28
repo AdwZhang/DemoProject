@@ -65,7 +65,7 @@ Shader "Unlit/EdgeDetection"
                 {
                     texColor = luminance(tex2D(_MainTex,i.uv[it]));
                     edgeX += texColor * Gx[it];
-                    edgeY += texColor * Gx[it];
+                    edgeY += texColor * Gy[it];
                 }
                 half edge = 1 - abs(edgeX) - abs(edgeY);
                 return edge;
@@ -100,7 +100,7 @@ Shader "Unlit/EdgeDetection"
                 fixed4 withEdgeColor = lerp(_EdgeColor,tex2D(_MainTex,i.uv[4]),edge);
                 fixed4 onlyEdgeColor = lerp(_EdgeColor,_BackgroundColor,edge);
                 
-                return lerp(withEdgeColor,onlyEdgeColor,_EdgeOnly);
+                return lerp(tex2D(_MainTex,i.uv[4]),onlyEdgeColor,_EdgeOnly);
             }
             
             ENDCG
