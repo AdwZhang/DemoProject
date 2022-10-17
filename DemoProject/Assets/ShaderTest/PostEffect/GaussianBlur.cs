@@ -40,10 +40,11 @@ public class GaussianBlur : PostEffectBase
 
             Graphics.Blit(src,buffer0);
 
-            for(int i=0;i<iterations;i++){
-                material.SetFloat("_BlurSize",1.0f+i*blurSpread);
+            for(int i=0;i<iterations;i++)
+            {
+                material.SetFloat("_BlurSize", 1.0f + i * blurSpread);
 
-                RenderTexture buffer1=RenderTexture.GetTemporary(rtW,rtH,0);
+                RenderTexture buffer1 = RenderTexture.GetTemporary(rtW, rtH, 0);
 
                 // Render the vertical pass
                 Graphics.Blit(buffer0,buffer1,material,0);
