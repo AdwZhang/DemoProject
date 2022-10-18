@@ -50,7 +50,7 @@ public class EasyImage : PostEffectBase
             n_material.SetFloat("_Brightness",brightness);
             Graphics.Blit(src,dest,n_material);
         }*/
-        n_material.SetFloat("_Brightness",brightness);
+        //n_material.SetFloat("_Brightness",brightness);
         Graphics.Blit(src,dest,n_material);
     }
 }

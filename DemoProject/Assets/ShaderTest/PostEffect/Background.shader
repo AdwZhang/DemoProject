@@ -38,14 +38,15 @@ Shader "Unlit/NewUnlitShader"
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 o.screen_pos = o.vertex;
-                o.screen_pos.y = -o.screen_pos.y;
+                //o.screen_pos = ComputeScreenPos(o.vertex);    //直接处理
+                o.screen_pos.y = o.screen_pos.y * _ProjectionParams.x;  // _ProjectionParams.x 平台参数，处理跨平台引起的坐标系差异问题
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-                half2 screen_uv = i.screen_pos.xy / i.screen_pos.w;
-                screen_uv = (screen_uv + 1.0) * 0.5; 
+                half2 screen_uv = i.screen_pos.xy / (i.screen_pos.w + 0.000001);     //透视除法  [-1,1]
+                screen_uv = (screen_uv + 1.0) * 0.5;  // [0,1]
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, screen_uv);
 
