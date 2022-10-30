@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Vine_Code
-  m_Shader: {fileID: 4800000, guid: b8e6605edf4982a459ad194d346d6efc, type: 3}
+  m_Name: MyVineCode
+  m_Shader: {fileID: 4800000, guid: 40613bb9e319ae446a083264ed17d12d, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -26,11 +26,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EndMax: 1.272
-    - _EndMin: 0.549
-    - _Expand: -5.4
-    - _Grow: 0.872
-    - _GrowMax: 1.2
-    - _GrowMin: 0.65
+    - _ClipLength: 0
+    - _EndLength: 0.64
+    - _Expand: -3.9
+    - _Grow: 1
+    - _GrowBegin: 0
+    - _GrowEnd: 0.46
     m_Colors: []
   m_BuildTextureStacks: []

@@ -2,14 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Vine
   m_Shader: {fileID: 4800000, guid: 8df8b9074cba4af4e90ceb360dced870, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -35,13 +36,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _Cutoff: 0
-    - _EndMax: 1.272
-    - _EndMin: 0.549
+    - _EndMax: 1.17
+    - _EndMin: 0.66
     - _Expand: -0.54
-    - _Grow: -0.03
-    - _GrowMax: 1.23
-    - _GrowMin: 0.65
+    - _Grow: 0.69
+    - _GrowMax: 1.28
+    - _GrowMin: 0.5
     - __dirty: 0
     m_Colors: []
+  m_BuildTextureStacks: []
