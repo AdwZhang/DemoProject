@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MyVineCode
-  m_Shader: {fileID: 4800000, guid: 40613bb9e319ae446a083264ed17d12d, type: 3}
+  m_Name: NprBasic
+  m_Shader: {fileID: 4800000, guid: 25e4af36660041343b8f2d30d1292c50, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -21,16 +21,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 79e4b2b14999cef4eae6601d3e35c286, type: 3}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 2800000, guid: 83c213bfbe5361a4c80969f02b4fd43b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ClipLength: 0.11
-    - _EndLength: 0.64
-    - _Expand: -3.9
-    - _Grow: 1
-    - _GrowBegin: 0
-    - _GrowEnd: 0.46
-    m_Colors: []
+    - _Outline: 0.01
+    - _SpecularScale: 0.014
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
