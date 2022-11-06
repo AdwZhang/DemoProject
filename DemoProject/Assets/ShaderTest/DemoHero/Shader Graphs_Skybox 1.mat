@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Skybox
+  m_Name: Shader Graphs_Skybox 1
   m_Shader: {fileID: -6465566751694194690, guid: 7c24b1501608f794191c9159a535ae5e,
     type: 3}
   m_ValidKeywords: []
@@ -34,9 +34,9 @@ Material:
     m_Colors:
     - _CloudScale: {r: 0.2, g: 0.2, b: 0, a: 0}
     - _CloudSpeed: {r: 0.02, g: 0.02, b: 0, a: 0}
-    - _HorizonColor: {r: 0.9433962, g: 0.64673066, b: 0.64673066, a: 0}
+    - _HorizonColor: {r: 0.4371069, g: 0.4930525, b: 0.5, a: 0}
     - _NadirColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
-    - _ZenithColor: {r: 0.8773585, g: 0.5757627, b: 0.3034887, a: 1}
+    - _ZenithColor: {r: 0.13133503, g: 0.08410458, b: 0.764151, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &2129592515657611710
 MonoBehaviour:
