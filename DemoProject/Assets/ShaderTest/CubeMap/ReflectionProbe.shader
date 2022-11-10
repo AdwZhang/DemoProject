@@ -1,9 +1,7 @@
-Shader "Unlit/CubeMap"
+Shader "ReflectionProbe"
 {
     Properties
     {
-        //_MainTex ("Texture", 2D) = "white" {}
-        _CubeMap ("Cube Map", Cube) = "white" {}
         _BumpMap ("Normal", 2D) = "Bump" {}
         _AOMap ("AO Map", 2D) = "white" {}
         _Tint ("Tint", Color) = (1,1,1,1)
@@ -98,9 +96,9 @@ Shader "Unlit/CubeMap"
 
                 reflect_dir = rotateDir(_Rotate,reflect_dir);
                 
-                float4 color_cubemap = texCUBE(_CubeMap,reflect_dir);
-                float3 env_color = DecodeHDR(color_cubemap,_CubeMap_HDR);
-                float3 final_color = env_color * ao * _Tint * _Expose ;
+                float4 env_color = UNITY_SAMPLE_TEXCUBE(unity_SpecCube0,reflect_dir);
+                float3 env_hdr_color = DecodeHDR(env_color,unity_SpecCube0_HDR);
+                float3 final_color = env_hdr_color * ao * _Tint * _Expose ;
                 return fixed4(final_color,1.0);
             }
             ENDCG
