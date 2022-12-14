@@ -125,7 +125,7 @@ Shader "Unlit/Phong"
                 
                 //half shadow = SHADOW_ATTENUATION(i);
                 
-                return float4(shadow.xxx,1.0);
+                return float4(final_color,1.0);
             }
             ENDCG
         }

@@ -34,9 +34,9 @@ Material:
     m_Colors:
     - _CloudScale: {r: 0.2, g: 0.2, b: 0, a: 0}
     - _CloudSpeed: {r: 0.02, g: 0.02, b: 0, a: 0}
-    - _HorizonColor: {r: 0.4371069, g: 0.4930525, b: 0.5, a: 0}
+    - _HorizonColor: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 0}
     - _NadirColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
-    - _ZenithColor: {r: 0.13133503, g: 0.08410458, b: 0.764151, a: 1}
+    - _ZenithColor: {r: 0, g: 0.19978666, b: 1, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &2129592515657611710
 MonoBehaviour:

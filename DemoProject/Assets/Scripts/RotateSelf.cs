@@ -18,7 +18,7 @@ public class RotateSelf : MonoBehaviour
     {
         if (isRotate)
         {
-            Quaternion rotU = Quaternion.AngleAxis(rotateSpeed / 100, Vector3.forward);
+            Quaternion rotU = Quaternion.AngleAxis(rotateSpeed / 100, Vector3.up);
             gameObject.transform.rotation *= rotU;
         }
     }
