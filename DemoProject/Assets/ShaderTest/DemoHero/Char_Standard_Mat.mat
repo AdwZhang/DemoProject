@@ -24,6 +24,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: eeaa5b24904464e4dae9d14c10cb366a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EnvMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 3e33e8d76fd54a94b94da08fb28d5360, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -34,7 +38,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Expose: 1
     - _Gloss: 60
+    - _Oiliness: 0
     m_Colors:
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - custom_SHAb: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHAg: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHAr: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHBb: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHBg: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHBr: {r: 0, g: 0, b: 0, a: 0}
+    - custom_SHC: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
