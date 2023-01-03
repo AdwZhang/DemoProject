@@ -3,8 +3,10 @@ guid: 61ddbf3e273d9ed4eb2aebaf07a028a5
 ShaderImporter:
   externalObjects: {}
   defaultTextures:
-  - _Noise: {fileID: 2800000, guid: fe5e45c9a89ac224dbbe244936fd3c2e, type: 3}
+  - _TextureSample1: {fileID: 2800000, guid: fe5e45c9a89ac224dbbe244936fd3c2e, type: 3}
   - _Gradient: {fileID: 2800000, guid: c5f1062ff1f19ee479caa14ec495c228, type: 3}
+  - _Noise: {fileID: 2800000, guid: fe5e45c9a89ac224dbbe244936fd3c2e, type: 3}
+  - _TextureSample0: {fileID: 2800000, guid: dc46fd052d9fed54baf607ecae65f584, type: 3}
   nonModifiableTextures: []
   preprocessorOverride: 0
   userData: 
