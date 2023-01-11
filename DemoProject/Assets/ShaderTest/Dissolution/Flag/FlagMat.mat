@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Gradient:
-        m_Texture: {fileID: 2800000, guid: 14e0ad991a355a04594c25ef5f6bd468, type: 3}
+        m_Texture: {fileID: 2800000, guid: f361555e8c872b948a3c521be7e730fc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
@@ -34,10 +34,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ChangeAmount: 1
+    - _ChangeAmount: 0.055
     - _Cutoff: 0.5
-    - _EdgeIntensity: 1.27
-    - _EdgeWidth: 0.2
+    - _EdgeIntensity: 3.38
+    - _EdgeWidth: 0.17
     - __dirty: 0
     - _xxxx: 0.5
     m_Colors:
