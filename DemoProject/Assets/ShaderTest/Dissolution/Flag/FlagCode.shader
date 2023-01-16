@@ -4,8 +4,11 @@ Shader "Dissolution/FlagCode"
     {
         _Diffuse ("Diffuse", 2D) = "white" {}
         _DissolveTex ("DissolveTex", 2D) = "white" {}
-        
+        _EdgeColor("EdgeColor", Color) = (0,0,0,0)
         _ChangeAmount ("ChangeAmount",Range(0,1)) = 0.0
+        _EdgeWidth ("EdgeWidth",Range(0,2)) = 0.0
+        _CutOff("CutOff", Float) = 0.5
+        _EdgeIntensity("EdgeIntensity", Range(1,10)) = 1.0
     }
     SubShader
     {
@@ -38,7 +41,11 @@ Shader "Dissolution/FlagCode"
             sampler2D _DissolveTex;
             float4 _DissolveTex_ST;
 
+            fixed4 _EdgeColor;
             fixed _ChangeAmount;
+            fixed _EdgeWidth;
+            fixed _CutOff;
+            fixed _EdgeIntensity;
             
             v2f vert (appdata v)
             {
@@ -52,13 +59,25 @@ Shader "Dissolution/FlagCode"
             {
                 // sample the texture
                 fixed4 col = tex2D(_Diffuse, i.uv);
-                clip(col.a - 0.5);
 
                 fixed dissolveValue = tex2D(_DissolveTex, i.uv).r;
 
-                _ChangeAmount = _ChangeAmount * 2 - 1;
+                fixed changeValue;
+
+                changeValue = _ChangeAmount;
+
+                changeValue = frac(_Time.y * 0.25);
                 
-                fixed change = dissolveValue - _ChangeAmount;
+                changeValue = changeValue * 2 - 1;
+                
+                fixed change = dissolveValue - changeValue;
+                clip(step(_CutOff, col.a * change) - 0.5);
+
+                fixed edge_alpha = distance(saturate(change), _CutOff);
+                edge_alpha = edge_alpha / _EdgeWidth; 
+                edge_alpha = 1 - edge_alpha;
+                _EdgeColor = _EdgeColor * _EdgeIntensity;
+                col = lerp(col, _EdgeColor, saturate(edge_alpha));              
                 
                 return col;
             }
