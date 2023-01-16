@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RotateSelf : MonoBehaviour
 {
-    public bool isRotate;
-    public float rotateSpeed;
+    public bool isRotate = true;
+    public float rotateSpeed = 30.0f;
 
     // Start is called before the first frame update
     void Start()
