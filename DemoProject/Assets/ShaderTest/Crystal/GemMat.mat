@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Diamond
-  m_Shader: {fileID: 4800000, guid: 1fd4a87df661a4b47aeb4eea2fa03d3d, type: 3}
+  m_Name: GemMat
+  m_Shader: {fileID: 4800000, guid: 34c11b2897c146a4cb23e1125c866f04, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _ReflectTex:
-        m_Texture: {fileID: 8900000, guid: 2e307e5f3c8f2d044b4e94aecdea157d, type: 3}
+        m_Texture: {fileID: 8900000, guid: 10b1860b5fdd083488bb46ecebf97d35, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RefractTex:
@@ -34,15 +34,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ReflectStrength: 1
-    - _RefractIntensity: 4
+    - _ReflectStrength: 2
+    - _RefractIntensity: 2
     - _RimBias: 0
     - _RimPower: 9
     - _RimScale: 1
     - _Shine: 0
     m_Colors:
-    - _Color0: {r: 0.8666667, g: 0.263985, b: 0.15294117, a: 0}
-    - _ColorA: {r: 0.16078433, g: 0.8784314, b: 0.31448004, a: 1}
-    - _ColorB: {r: 1, g: 0.2111175, b: 0, a: 0.5019608}
     - _RimColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
