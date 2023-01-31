@@ -5,6 +5,9 @@ ShaderImporter:
   defaultTextures:
   - _Matcap: {fileID: 2800000, guid: a69932f6f37b5ba4a9206e626a757927, type: 3}
   - _RefractMatcap: {fileID: 2800000, guid: 2b080761da3fadc429cc52815e37a507, type: 3}
+  - _TextureSample0: {fileID: 2800000, guid: c654691e68d99c44c86627406c2420b2, type: 3}
+  - _dirty: {fileID: 2800000, guid: 27b90822b20588a4f88dc20805a6b3f1, type: 3}
+  - _logo: {fileID: 2800000, guid: ce7a0af0b9894564b803cca713a9a86e, type: 3}
   nonModifiableTextures: []
   preprocessorOverride: 0
   userData: 

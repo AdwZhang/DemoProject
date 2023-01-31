@@ -11,10 +11,10 @@ Material:
   m_Shader: {fileID: 4800000, guid: a52db14d7232daf4586d86860c8a0c25, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2999
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2b080761da3fadc429cc52815e37a507, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -61,6 +61,22 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RefractMatcap:
+        m_Texture: {fileID: 2800000, guid: 369677b5da8d79b4691eb711fa44a743, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: c654691e68d99c44c86627406c2420b2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _dirty:
+        m_Texture: {fileID: 2800000, guid: 27b90822b20588a4f88dc20805a6b3f1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _logo:
+        m_Texture: {fileID: 2800000, guid: ce7a0af0b9894564b803cca713a9a86e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -75,9 +91,11 @@ Material:
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
+    - _ObjectHeight: 0.35
+    - _ObjectPivotOffset: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RefractIntensity: 1
+    - _RefractIntensity: 0.66
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -87,5 +105,5 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RefractColor: {r: 0, g: 0, b: 0, a: 0}
+    - _RefractColor: {r: 0.05098036, g: 0.5907431, b: 0.9333333, a: 0}
   m_BuildTextureStacks: []
