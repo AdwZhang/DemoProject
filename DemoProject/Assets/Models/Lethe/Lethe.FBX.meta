@@ -3,7 +3,17 @@ guid: efc15aa853ebea445906d74ef06f0bf1
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lethe_Hair_MI_1
+    second: {fileID: 2100000, guid: 228620febdf0fff4391e587a1f730e31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lethe_MI_1
+    second: {fileID: 2100000, guid: d5caebc9eca5c8b428b2b5ee4ee45cab, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
