@@ -86,7 +86,7 @@ Material:
     - _Mode: 0
     - _NoiseIntensity: 0.2
     - _OcclusionStrength: 1
-    - _OpaLength: 0
+    - _OpaLength: 0.53
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
