@@ -78,12 +78,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BlingPower: 20
+    - _BlingScale: 3
+    - _BlingSpeed: 3
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Float0: 1
-    - _Float1: 2
+    - _Float0: 20
+    - _Float1: 1
     - _Float2: 0.2
     - _FlowLightIntensity: 1
     - _FlowRimBias: 0.2
@@ -95,10 +98,10 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RefractFactor: 0.02
+    - _RefractFactor: 0.01
     - _RimBias: 0
     - _RimPower: 5
-    - _RimScale: 3
+    - _RimScale: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -111,7 +114,7 @@ Material:
     - _FlowLightColor: {r: 0.28627458, g: 0.3933071, b: 0.90588236, a: 0}
     - _FlowTillingSpeed: {r: 0.8, g: 0.8, b: 0, a: 0.3}
     - _RimColor: {r: 0.4274208, g: 0.6817045, b: 0.8018868, a: 0}
-    - _StarSpeed: {r: 0.02, g: 0.01, b: 0, a: 0}
+    - _StarSpeed: {r: 0.01, g: -0.01, b: 0, a: 0}
     - _TillingAndOffset: {r: 0.5, g: 0.5, b: -0.56, a: 0}
     - _Vector0: {r: 1, g: 1, b: 0, a: 0.2}
   m_BuildTextureStacks: []
