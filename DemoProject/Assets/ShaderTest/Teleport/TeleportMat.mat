@@ -87,16 +87,22 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.1
     - _DetailNormalMapScale: 1
+    - _DissolveAmount: 0.61
+    - _DissolveOffset: -4.09
+    - _DissolveSpread: 0.9
     - _DstBlend: 0
-    - _Float0: 0
+    - _EdgeLength: 15
+    - _Float0: 0.6
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _MetallicAdjust: 0
     - _Mode: 0
+    - _NoiseScale: 49
+    - _ObjectLength: 6.3
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Smoothness: 0
@@ -107,11 +113,13 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
-    - _length: 1.85
-    - _offset: 0.57
+    - _length: 1.9
+    - _offset: 0
     - _percent: 0
     - _pivot: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 0.13562399, g: 0.2509804, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _NoiseScale: {r: 500, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
