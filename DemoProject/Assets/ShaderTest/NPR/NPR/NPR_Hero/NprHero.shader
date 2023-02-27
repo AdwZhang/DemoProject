@@ -10,17 +10,82 @@ Shader "NPR/NprHero"
         _ToonHardness ("ToonHardness", Float) = 20.0
         _SpecSize ("Spec Size", Range(0,1)) = 0.1
         _SpecColor ("Spec Color", COLOR) = (1,1,1,1)
+        _OutlineSize ("Outline Size", Float) = 0.0
+        _OutlineColor ("Outline Color", COLOR) = (1,1,1,1)
+        _OutlineZbias ("Outline Zbias",Float) = 0.0
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Opaque" "LightMode" = "ForwardBase" }
+
+        Pass
+        {
+            Cull Front
+            CGPROGRAM
+
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                float4 normal : NORMAL;
+                float4 texcoord0 : TEXCOORD0;
+                float4 color : COLOR;
+            };
+
+            struct v2f
+            {
+                float4 pos : SV_POSITION;
+                float2 uv : TEXCOORD0;
+            };
+
+            float _OutlineSize;
+            sampler2D _BaseMap;
+            float4 _OutlineColor;
+            float _OutlineZbias;
+            
+            v2f vert (appdata v)
+            {
+                v2f o;
+
+                float3 pos_view = UnityObjectToViewPos(v.vertex);
+                float3 normal_world = UnityObjectToWorldNormal(v.normal);
+                float3 outline_dir = normalize(mul((float3x3)UNITY_MATRIX_V, normal_world));
+                outline_dir.z = _OutlineZbias * (1.0 - v.color.b);
+                pos_view += outline_dir * _OutlineSize * 0.001 * v.color.a;
+                o.pos = mul(UNITY_MATRIX_P, float4(pos_view, 1.0));
+                o.uv = v.texcoord0;
+                /*float3 world_pos = mul(unity_ObjectToWorld,v.vertex).xyz;
+                float3 world_normal = UnityObjectToWorldNormal(v.normal);
+                world_pos += world_normal * _OutlineSize * 0.001;
+                o.pos = UnityWorldToClipPos(float4(world_pos,1.0));*/
+                //o.pos = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+                float3 baseColor = tex2D(_BaseMap, i.uv).xyz;
+                half maxComponent = max(max(baseColor.r,baseColor.g),baseColor.b) - 0.004;
+                half3 saturateColor = step(maxComponent.rrr, baseColor) * baseColor;
+                saturateColor = lerp(baseColor, saturateColor, 0.6);
+                half3 outlineColor = 0.8 * saturateColor * baseColor * _OutlineColor.xyz;
+                return fixed4(outlineColor, 1.0);
+            }
+            
+            ENDCG
+        }
 
         Pass
         {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma multi_compile_fwdbase
             #include "UnityCG.cginc"
+            #include "AutoLight.cginc"
 
             struct appdata
             {
@@ -107,7 +172,7 @@ Shader "NPR/NprHero"
                 // 描线
                 half3 final_line = inner_line.xxx * detail_color;
                 fixed3 final_color = (diffuse_color + spec_color) * final_line;
-                
+                final_color = sqrt(max(exp2(log2(max(final_color,0.0))* 2.2), 0.0));
                 return fixed4(final_color,1.0);
             }
             ENDCG

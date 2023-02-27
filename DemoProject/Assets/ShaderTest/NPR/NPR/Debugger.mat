@@ -30,6 +30,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _A: 0
+    - _B: 0
+    - _EdgeLength: 15
+    - _G: 0
+    - _R: 0
+    - _ToggleSwitch0: 0
     - __dirty: 0
     m_Colors: []
   m_BuildTextureStacks: []

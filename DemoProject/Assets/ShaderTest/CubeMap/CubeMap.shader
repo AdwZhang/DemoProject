@@ -92,10 +92,12 @@ Shader "Unlit/CubeMap"
                 normal_dir = normalize(mul(TBN, normal_dir));
 
                 float ao = tex2D(_AOMap, i.uv).r;
-                
+
+                // 获取反射光向量
                 float3 view_dir = normalize(UnityWorldSpaceViewDir(pos_world));
                 float3 reflect_dir = reflect(-view_dir,normal_dir);
 
+                // 旋转反射光向量以实现
                 reflect_dir = rotateDir(_Rotate,reflect_dir);
                 
                 float4 color_cubemap = texCUBE(_CubeMap,reflect_dir);

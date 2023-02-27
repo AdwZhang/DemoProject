@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sky_Test
+  m_Shader: {fileID: 4800000, guid: 71a7e3d6295d1ad42bfccf7a3b4e76a1, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2888
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _NebulaTex:
+        m_Texture: {fileID: 2800000, guid: bf74a574c7ad7694fbac2f8038fbaa84, type: 3}
+        m_Scale: {x: 8, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseMask:
+        m_Texture: {fileID: 2800000, guid: cd31005260d895b4fb3d9d075143f534, type: 3}
+        m_Scale: {x: 16, y: 4}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Intensity: 1.3
+    - _StarIntensity: 100
+    - __dirty: 0
+    m_Colors:
+    - _FogColor: {r: 0.10849059, g: 0.85868156, b: 1, a: 0}
+    - _NoiseSpeed: {r: 0.2, g: 0.2, b: 1, a: 1}
+    - _SkyFogOffset: {r: 0, g: 2.48, b: 0, a: 0}
+  m_BuildTextureStacks: []
