@@ -68,6 +68,18 @@ Shader "Unlit/Phong"
                 texcoords = texcoords + p;
                 return texcoords;
             }
+
+            // 色调映射
+            float3 ACESFilm(float3 x)
+            {
+                float a = 2.51f;
+                float b = 0.03f;
+                float c = 2.43f;
+                float d = 0.59f;
+                float e = 0.14f;
+                
+                return saturate((x * (a*x + b)) / (x*(c*x + d) + e));
+            }
             
             v2f vert (appdata v)
             {
@@ -112,6 +124,7 @@ Shader "Unlit/Phong"
                            
                 float NdotL = dot(bump,ligth_dir);
                 float4 base_color = tex2D(_MainTex,texcoords);
+                //base_color = pow(base_color,2.2);     // 转换为线性空间
                 float4 ao_color = tex2D(_AOMap,texcoords); 
                 float4 spec_mask = tex2D(_SpecMask,texcoords);
                 //spec_mask = float4(1.0,1.0,1.0,1.0) - spec_mask;
@@ -124,7 +137,8 @@ Shader "Unlit/Phong"
                 // sample the texture
                 
                 //half shadow = SHADOW_ATTENUATION(i);
-                
+                float3 tone_color = ACESFilm(final_color);
+                tone_color = pow(tone_color,1/2.2);   // 转换为Gamma空间
                 return float4(final_color,1.0);
             }
             ENDCG
