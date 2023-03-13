@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EnvMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 8900000, guid: bb899189ddaa49841a4bff13dd32c340, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -39,15 +39,15 @@ Material:
     m_Ints: []
     m_Floats:
     - _Expose: 1
-    - _Gloss: 60
-    - _Oiliness: 0
+    - _Gloss: 256
+    - _Oiliness: 0.03
     m_Colors:
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - custom_SHAb: {r: 0, g: 0, b: 0, a: 0}
-    - custom_SHAg: {r: 0, g: 0, b: 0, a: 0}
-    - custom_SHAr: {r: 0, g: 0, b: 0, a: 0}
-    - custom_SHBb: {r: 0, g: 0, b: 0, a: 0}
-    - custom_SHBg: {r: 0, g: 0, b: 0, a: 0}
-    - custom_SHBr: {r: 0, g: 0, b: 0, a: 0}
-    - custom_SHC: {r: 0, g: 0, b: 0, a: 1}
+    - custom_SHAb: {r: 0.0005343288, g: 0.033434935, b: -0.0034194745, a: 0.15074055}
+    - custom_SHAg: {r: 0.002595371, g: 0.1022765, b: -0.006887486, a: 0.21037678}
+    - custom_SHAr: {r: -0.003127127, g: 0.30410096, b: -0.0030333528, a: 0.5194768}
+    - custom_SHBb: {r: 0.0032307326, g: -0.005139828, b: 0.039673794, a: -0.00021483426}
+    - custom_SHBg: {r: 0.006288409, g: -0.0103676235, b: 0.03247463, a: -0.0013378842}
+    - custom_SHBr: {r: 0.0027606033, g: -0.005308196, b: 0.060292244, a: 0.0002384906}
+    - custom_SHC: {r: 0.056507286, g: 0.032371655, b: 0.03895022, a: 1}
   m_BuildTextureStacks: []

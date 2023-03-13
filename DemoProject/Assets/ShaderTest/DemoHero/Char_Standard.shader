@@ -152,7 +152,7 @@ Shader "Shader_Test/Char_Standard"
                 float3 light_dir = normalize(UnityWorldSpaceLightDir(world_pos));
 
                 // Light
-                fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT;
+                //fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT;
                 half atten = LIGHT_ATTENUATION(i);      //光照衰减
                 
                 // Direct Diffuse 直接光漫反射
