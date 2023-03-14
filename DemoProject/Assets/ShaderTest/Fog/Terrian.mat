@@ -31,17 +31,20 @@ Material:
     m_Ints: []
     m_Floats:
     - _EdgeLength: 15
-    - _FogDistanceEnd: 800
+    - _FogDistanceEnd: 700
     - _FogDistanceStart: 0
     - _FogEnd: 700
-    - _FogHeightEnd: 196.4
-    - _FogHeightPoint: -205
-    - _FogHeightStart: 0
+    - _FogHeightEnd: 500
+    - _FogHeightPoint: -905.6
+    - _FogHeightStart: -50
     - _FogStart: 0
     - _Smoothness: 0
+    - _SunFogIntensity: 1.5
+    - _SunFogRange: 10
     - __dirty: 0
     m_Colors:
-    - _BaseColor: {r: 0.33873263, g: 0.34174034, b: 0.41509432, a: 0}
+    - _BaseColor: {r: 0.47718647, g: 0.9528302, b: 0.28315237, a: 0}
     - _Color0: {r: 0.9245283, g: 0.15263437, b: 0.15263437, a: 0}
-    - _FogColor: {r: 1, g: 0.9411202, b: 0.759434, a: 0}
+    - _FogColor: {r: 0.8058473, g: 0.8584906, b: 0.8584906, a: 0}
+    - _SunColor: {r: 0.74509805, g: 0.63529414, b: 0.7411765, a: 0}
   m_BuildTextureStacks: []
