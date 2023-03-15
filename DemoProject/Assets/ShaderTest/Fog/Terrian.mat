@@ -43,8 +43,8 @@ Material:
     - _SunFogRange: 10
     - __dirty: 0
     m_Colors:
-    - _BaseColor: {r: 0.47718647, g: 0.9528302, b: 0.28315237, a: 0}
+    - _BaseColor: {r: 0.696265, g: 1, b: 0.5707547, a: 0}
     - _Color0: {r: 0.9245283, g: 0.15263437, b: 0.15263437, a: 0}
     - _FogColor: {r: 0.8058473, g: 0.8584906, b: 0.8584906, a: 0}
-    - _SunColor: {r: 0.74509805, g: 0.63529414, b: 0.7411765, a: 0}
+    - _SunColor: {r: 0, g: 0.85490197, b: 0.972549, a: 0}
   m_BuildTextureStacks: []
