@@ -24,12 +24,12 @@ Material:
     m_Floats:
     - _FogDistanceEnd: 700
     - _FogDistanceStart: 0
-    - _FogHeightEnd: 200
+    - _FogHeightEnd: 400
     - _FogHeightStart: -10.4
     - _SunFogIntensity: 1
-    - _SunFogRange: 12.63
+    - _SunFogRange: 12
     - __dirty: 0
     m_Colors:
     - _FogColor: {r: 1, g: 1, b: 1, a: 0}
-    - _SunColor: {r: 0.9056604, g: 0.20932718, b: 0.20932718, a: 0}
+    - _SunColor: {r: 0.8679245, g: 0.77100617, b: 0.25792095, a: 0}
   m_BuildTextureStacks: []
